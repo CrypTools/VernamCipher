@@ -1,5 +1,7 @@
 # VernamCipher
 
+[![Build Status](https://travis-ci.org/CrypTools/VernamCipher.svg?branch=master)](https://travis-ci.org/CrypTools/VernamCipher)
+
 In cryptography, the VernamCipher (also known as the one-time pad (OTP)) is an encryption technique that cannot be cracked, but requires the use of a one-time pre-shared key the same size as, or longer than, the message being sent.
 
 # Detailed Explanations : How it works?
