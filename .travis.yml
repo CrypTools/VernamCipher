@@ -12,9 +12,11 @@ before_install:
     - npm install -g npm@latest
     - npm install -g eye.js
 install:
-    - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)" # Install swift
+    - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)" # Install Swift
+    - sudo apt-get install python3 # Install Pyhton3
 script:
     - eye # JS
     - swiftc swift/lib.swift -o out # Swift
+    - python3 py/__test__.py
 notifications:
   email:                false
