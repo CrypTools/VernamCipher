@@ -12,10 +12,17 @@ import Foundation
 
 extension Int {
     var genKey : String {
+        func getRandomNum(_ min: Int, _ max: Int) -> Int {
+            #if os(Linux)
+                return Int(random() % max) + min
+            #else
+                return Int(arc4random_uniform(UInt32(max)) + UInt32(min))
+            #endif
+        }
         let alphabet = Array("abcdefghijklmnopqrstuvwxyz")
         var out = "";
         for i in 1...self {
-            out += String(alphabet[Int(arc4random_uniform(26))])
+            out += String(alphabet[getRandomNum(0, 25)])
         }
         return out;
     }
