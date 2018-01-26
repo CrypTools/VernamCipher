@@ -24,3 +24,6 @@ String.prototype.decrypt = function (key) {
 	}
 	return out;
 }
+
+
+module.exports = (str, key) => str.decrypt(key);

@@ -12,3 +12,5 @@ Number.prototype.genKey = function () {
 	}
 	return out;
 };
+
+module.exports = n => Number(n).genKey();

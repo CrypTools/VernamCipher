@@ -24,3 +24,5 @@ String.prototype.encrypt = function (key) {
 	}
 	return out;
 }
+
+module.exports = (str, key) => str.encrypt(key);
