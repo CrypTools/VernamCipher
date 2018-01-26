@@ -21,7 +21,7 @@ extension Int {
         }
         let alphabet = Array("abcdefghijklmnopqrstuvwxyz")
         var out = "";
-        for i in 1...self {
+        for _ in 1...self {
             out += String(alphabet[getRandomNum(0, 25)])
         }
         return out;
